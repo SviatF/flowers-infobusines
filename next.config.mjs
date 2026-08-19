@@ -2,7 +2,7 @@
 const nextConfig = {
   poweredByHeader: false,
   outputFileTracingIncludes: {
-    '/*': ['./index.html', './assets/**/*'],
+    '/*': ['./assets/**/*'],
   },
 };
 
