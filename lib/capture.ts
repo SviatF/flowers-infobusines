@@ -10,10 +10,12 @@ type CaptureDocument = {
 };
 
 const capturePath = path.join(process.cwd(), 'index.html');
+let cachedCapture: CaptureDocument | null = null;
 
 const blockedScriptTokens = [
   'rightmessage',
   'googletagmanager',
+  'events.framer.com',
   "gtag('",
   'gtag("',
   '__framer_force_showing_editorbar_since',
@@ -91,6 +93,8 @@ function sanitizeBody(body: string) {
 }
 
 export function getCaptureDocument(): CaptureDocument {
+  if (cachedCapture) return cachedCapture;
+
   const html = fs.readFileSync(capturePath, 'utf8');
   const htmlOpen = html.match(/<html\b([^>]*)>/i)?.[1] ?? '';
   const head = extractInner(html, 'head');
@@ -106,13 +110,13 @@ export function getCaptureDocument(): CaptureDocument {
     ?.replaceAll('&amp;', '&')
     .trim() ?? '';
 
-  const body = `${extractHeadScripts(head)}\n${sanitizeBody(rawBody)}`;
-
-  return {
+  cachedCapture = {
     lang: extractAttribute(htmlOpen, 'lang') || 'en',
     title,
     description,
     styles: extractStyles(head),
-    body,
+    body: `${extractHeadScripts(head)}\n${sanitizeBody(rawBody)}`,
   };
+
+  return cachedCapture;
 }
