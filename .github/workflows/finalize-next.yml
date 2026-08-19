@@ -1,0 +1,36 @@
+name: Finalize Next.js cleanup
+
+on:
+  push:
+    branches:
+      - agent/nextjs-ssr-migration
+    paths:
+      - .github/workflows/finalize-next.yml
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/nextjs-ssr-migration
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate Next-only source
+        run: node scripts/finalize-next.mjs
+
+      - name: Commit cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Finalize Next.js-only repository" || exit 0
+          git push origin HEAD:agent/nextjs-ssr-migration
