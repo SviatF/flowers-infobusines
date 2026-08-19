@@ -1,0 +1,204 @@
+{
+  "sourceUrl": "https://danmall.com/",
+  "capturedAt": "2026-08-19T21:03:36.045Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "document": {
+    "width": 1440,
+    "height": 15509,
+    "title": "Dan Mall Helps Designers Make More Money & Get Their Flowers"
+  },
+  "colors": [
+    "rgb(0, 0, 0)",
+    "rgb(0, 0, 238)",
+    "rgb(255, 255, 255)",
+    "rgb(247, 121, 208)",
+    "rgba(255, 255, 255, 0.3)",
+    "rgba(255, 255, 255, 0.5)",
+    "rgb(38, 33, 29)",
+    "rgb(166, 145, 129)",
+    "rgba(255, 255, 255, 0.76)",
+    "rgb(199, 255, 31)",
+    "rgb(16, 23, 13)",
+    "rgb(47, 68, 77)"
+  ],
+  "fonts": [
+    "sans-serif",
+    "\"Mark Pro Bold\", sans-serif",
+    "\"RST Thermal Regular Text Italic\", \"RST Thermal Regular Text Italic Placeholder\", sans-serif",
+    "\"Bueno Bold\", \"Bueno Bold Placeholder\", sans-serif",
+    "\"RST Thermal Light Text\", \"RST Thermal Light Text Placeholder\", sans-serif",
+    "Inter, \"Inter Placeholder\", sans-serif",
+    "\"RST Thermal Regular Text\", \"RST Thermal Regular Text Placeholder\", sans-serif",
+    "\"RST Thermal Regular Text Italic\", \"RST Thermal Regular Text Italic Placeholder\", serif",
+    "\"RST Thermal Regular Text Italic\", serif",
+    "Heebo, \"Heebo Placeholder\", sans-serif",
+    "\"Bueno Bold\", sans-serif",
+    "\"RST Thermal Light Text\", sans-serif",
+    "\"RST Thermal Regular Text\", sans-serif",
+    "\"United Sans Reg Medium\", sans-serif",
+    "\"RST Thermal VF Variable\", sans-serif",
+    "\"RST Thermal VF\", \"RST Thermal VF Placeholder\", sans-serif",
+    "\"Mark Pro Bold\", \"Mark Pro Bold Placeholder\", sans-serif"
+  ],
+  "borderRadii": [
+    "2px",
+    "4px 0px 0px 4px"
+  ],
+  "headings": [
+    {
+      "tag": "h3",
+      "text": "01",
+      "rect": {
+        "x": 112,
+        "y": 6308,
+        "width": 131,
+        "height": 64
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Papa Bear Pricing",
+      "rect": {
+        "x": 112,
+        "y": 6572,
+        "width": 356,
+        "height": 38
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "A pricing framework that actually advocates for your client.",
+      "rect": {
+        "x": 112,
+        "y": 6634,
+        "width": 356,
+        "height": 53
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "02",
+      "rect": {
+        "x": 542,
+        "y": 6308,
+        "width": 153,
+        "height": 64
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Say, Do, Say",
+      "rect": {
+        "x": 542,
+        "y": 6572,
+        "width": 356,
+        "height": 38
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "The 3-step framework I use on every project.",
+      "rect": {
+        "x": 542,
+        "y": 6634,
+        "width": 356,
+        "height": 53
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "03",
+      "rect": {
+        "x": 972,
+        "y": 6302,
+        "width": 153,
+        "height": 64
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Stealing Your Way to Original Designs",
+      "rect": {
+        "x": 972,
+        "y": 6566,
+        "width": 356,
+        "height": 77
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "There’s nothing new under the sun.",
+      "rect": {
+        "x": 972,
+        "y": 6666,
+        "width": 356,
+        "height": 26
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Books I’m Currently Reading",
+      "rect": {
+        "x": 467,
+        "y": 12227,
+        "width": 506,
+        "height": 40
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Subscribe",
+      "rect": {
+        "x": 920,
+        "y": 3770,
+        "width": 320,
+        "height": 84
+      }
+    },
+    {
+      "text": "Subscribe",
+      "rect": {
+        "x": 920,
+        "y": 14369,
+        "width": 320,
+        "height": 84
+      }
+    },
+    {
+      "text": "",
+      "rect": {
+        "x": 1345,
+        "y": 449,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "text": "Get the Map",
+      "rect": {
+        "x": 1065,
+        "y": 901,
+        "width": 280,
+        "height": 45
+      }
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "tag": "header",
+      "id": null,
+      "className": "framer-yngmb2",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1638
+      }
+    }
+  ]
+}
