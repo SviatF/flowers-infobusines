@@ -1,11 +1,11 @@
 # Flowers Infobusiness — Next.js SSR
 
-This repository now runs the captured single-page site through Next.js App Router with request-time server rendering.
+Production-ready Next.js App Router project with server-side rendering.
 
-## Runtime
+## Stack
 
 - Next.js 16.3
-- React 19.2
+- React 19.2.7
 - TypeScript
 - Node.js 20.9+
 
@@ -19,18 +19,11 @@ npm run build
 npm start
 ```
 
-## How the migration works
+## Structure
 
-The original `index.html` remains the visual source of truth. `lib/capture.ts` reads it on the server, extracts the captured CSS and body markup, removes third-party tracking/editor runtime noise, and renders the result from `app/page.tsx`.
+- `app/` — App Router pages, layout, and server route handlers
+- `components/` — client-side compatibility components
+- `lib/generated-capture.json` — generated page payload consumed by Next.js; no standalone legacy HTML is required at runtime
+- `assets/` — captured fonts, images, and JavaScript resources served by the Next.js asset route
 
-The existing `assets/` directory remains unchanged. `app/assets/[...path]/route.ts` serves the captured fonts, images, and JavaScript through Next.js so the original relative asset URLs continue to work without duplicating binary files into `public/`.
-
-`CapturedScriptReviver` replays the retained Framer runtime scripts after React hydration so interactive behavior can continue without executing legacy scripts during hydration itself.
-
-## Validation
-
-Every push to the migration branch and every pull request runs TypeScript validation followed by a production `next build` in GitHub Actions.
-
-## Next step
-
-The SSR adapter intentionally preserves visual fidelity first. Individual captured sections can now be progressively replaced with native React Server/Client Components without changing the deployment architecture.
+The old standalone `index.html`, `design.json`, and capture README have been removed. The repository now deploys as a single Next.js application.
