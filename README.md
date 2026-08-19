@@ -27,6 +27,10 @@ The existing `assets/` directory remains unchanged. `app/assets/[...path]/route.
 
 `CapturedScriptReviver` replays the retained Framer runtime scripts after React hydration so interactive behavior can continue without executing legacy scripts during hydration itself.
 
+## Validation
+
+Every push to the migration branch and every pull request runs TypeScript validation followed by a production `next build` in GitHub Actions.
+
 ## Next step
 
 The SSR adapter intentionally preserves visual fidelity first. Individual captured sections can now be progressively replaced with native React Server/Client Components without changing the deployment architecture.
